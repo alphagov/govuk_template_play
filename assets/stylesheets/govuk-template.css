@@ -1,0 +1,1278 @@
+/* govuk_frontend_toolkit includes */
+@-ms-viewport {
+  width: device-width; }
+
+@-o-viewport {
+  width: device-width; }
+
+/* CSS 3 Mixins
+
+  Add them as you need them. This should let us manage vendor prefixes in one place.
+ */
+@font-face {
+  font-family: GDS-Logo;
+  src: local("HelveticaNeue"), local("Helvetica Neue"), local("Arial"), local("Helvetica"); }
+
+@-ms-viewport {
+  width: device-width; }
+
+@-o-viewport {
+  width: device-width; }
+
+/* Cross-browser shims
+
+  Ways of normalising properties across browsers.
+ */
+@-ms-viewport {
+  width: device-width; }
+
+@-o-viewport {
+  width: device-width; }
+
+/* Usage:
+   @include inline-block
+
+   or
+
+   @include inline-block("250px")
+
+   which gives a min-height to the inline-block elements.
+*/
+/* Contain floats usage:
+
+   .this-has-floated-children {
+     @extend %contain-floats;
+   }
+
+*/
+#global-header .header-wrapper:after, #global-header .header-wrapper .header-global:after, #global-header .header-wrapper .header-global .header-logo:after,
+#global-header .header-wrapper .header-global .site-search:after, #global-header form#search .content:after, #global-header .header-proposition #proposition-links:after {
+  content: "";
+  display: block;
+  clear: both; }
+
+/* CSS 3 Mixins
+
+  Add them as you need them. This should let us manage vendor prefixes in one place.
+ */
+@-ms-viewport {
+  width: device-width; }
+
+@-o-viewport {
+  width: device-width; }
+
+/*
+
+Mixin and defaults for making buttons on GOV.UK services.
+
+For guidance, see: https://www.gov.uk/service-manual/design-and-content/resources/buttons.html
+
+Example usage:
+
+.button{
+  @include button;
+}
+.button-secondary{
+  @include button($grey-3);
+}
+.button-warning{
+  @include button($red);
+}
+
+*/
+/* local styleguide includes */
+/* New Greys */
+/* normalize.css v1.0.0 | MIT License | git.io/normalize */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/*
+ * Corrects `block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block; }
+
+/*
+ * Corrects `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1; }
+
+/*
+ * Prevents modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/*
+ * Addresses styling for `hidden` attribute not present in IE 7/8/9, Firefox 3,
+ * and Safari 4.
+ * Known issue: no IE 6 support.
+ */
+[hidden] {
+  display: none; }
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/*
+ * 1. Corrects text resizing oddly in IE 6/7 when body `font-size` is set using
+ *    `em` units.
+ * 2. Prevents iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-size: 100%;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */ }
+
+/*
+ * Addresses `font-family` inconsistency between `textarea` and other form
+ * elements.
+ */
+html,
+button,
+input,
+select,
+textarea {
+  font-family: sans-serif; }
+
+/*
+ * Addresses margins handled incorrectly in IE 6/7.
+ */
+body {
+  margin: 0; }
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/*
+ * Addresses `outline` inconsistency between Chrome and other browsers.
+ */
+a:focus {
+  outline: thin dotted; }
+
+/*
+ * Improves readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0; }
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/*
+ * Addresses font sizes and margins set differently in IE 6/7.
+ * Addresses font sizes within `section` and `article` in Firefox 4+, Safari 5,
+ * and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+h2 {
+  font-size: 1.5em;
+  margin: 0.83em 0; }
+
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0; }
+
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0; }
+
+h5 {
+  font-size: 0.83em;
+  margin: 1.67em 0; }
+
+h6 {
+  font-size: 0.75em;
+  margin: 2.33em 0; }
+
+/*
+ * Make abbr consistent across browsers. There is no border as users found it confusing as to whether it was a link or not.
+ */
+abbr[title] {
+  border-bottom: none; }
+
+/*
+ * Addresses style set to `bolder` in Firefox 3+, Safari 4/5, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold; }
+
+blockquote {
+  margin: 1em 40px; }
+
+/*
+ * Addresses styling not present in Safari 5 and Chrome.
+ */
+dfn {
+  font-style: italic; }
+
+/*
+ * Addresses styling not present in IE 6/7/8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000; }
+
+/*
+ * Addresses margins set differently in IE 6/7.
+ */
+p,
+pre {
+  margin: 1em 0; }
+
+/*
+ * Corrects font family set oddly in IE 6, Safari 4/5, and Chrome.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  _font-family: 'courier new', monospace;
+  font-size: 1em; }
+
+/*
+ * Improves readability of pre-formatted text in all browsers.
+ */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word; }
+
+/*
+ * Addresses CSS quotes not supported in IE 6/7.
+ */
+q {
+  quotes: none; }
+
+/*
+ * Addresses `quotes` property not supported in Safari 4.
+ */
+q:before,
+q:after {
+  content: '';
+  content: none; }
+
+small {
+  font-size: 75%; }
+
+/*
+ * Prevents `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/* ==========================================================================
+   Lists
+   ========================================================================== */
+/*
+ * Addresses margins set differently in IE 6/7.
+ */
+dl,
+menu,
+ol,
+ul {
+  margin: 1em 0; }
+
+dd {
+  margin: 0 0 0 40px; }
+
+/*
+ * Addresses paddings set differently in IE 6/7.
+ */
+menu,
+ol,
+ul {
+  padding: 0 0 0 40px; }
+
+/*
+ * Corrects list images handled incorrectly in IE 7.
+ */
+nav ul,
+nav ol {
+  list-style: none;
+  list-style-image: none; }
+
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/*
+ * 1. Removes border when inside `a` element in IE 6/7/8/9 and Firefox 3.
+ * 2. Improves image quality when scaled in IE 7.
+ */
+img {
+  border: 0;
+  /* 1 */
+  -ms-interpolation-mode: bicubic;
+  /* 2 */ }
+
+/*
+ * Corrects overflow displayed oddly in IE 9.
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/*
+ * Addresses margin not present in IE 6/7/8/9, Safari 5, and Opera 11.
+ */
+figure {
+  margin: 0; }
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/*
+ * Corrects margin displayed oddly in IE 6/7.
+ */
+form {
+  margin: 0; }
+
+/*
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/*
+ * 1. Corrects color not being inherited in IE 6/7/8/9.
+ * 2. Corrects text not wrapping in Firefox 3.
+ * 3. Corrects alignment displayed oddly in IE 6/7.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  white-space: normal;
+  /* 2 */
+  *margin-left: -7px;
+  /* 3 */ }
+
+/*
+ * 1. Corrects font size not being inherited in all browsers.
+ * 2. Addresses margins set differently in IE 6/7, Firefox 3+, Safari 5,
+ *    and Chrome.
+ * 3. Improves appearance and consistency in all browsers.
+ */
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  vertical-align: baseline;
+  /* 3 */
+  *vertical-align: middle;
+  /* 3 */ }
+
+/*
+ * Addresses Firefox 3+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+button,
+input {
+  line-height: normal; }
+
+/*
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Corrects inability to style clickable `input` types in iOS.
+ * 3. Improves usability and consistency of cursor style between image-type
+ *    `input` and others.
+ * 4. Removes inner spacing in IE 7 without affecting normal text inputs.
+ *    Known issue: inner spacing remains in IE 6.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+  *overflow: visible;
+  /* 4 */ }
+
+/*
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+input[disabled] {
+  cursor: default; }
+
+/*
+ * 1. Addresses box sizing set to content-box in IE 8/9.
+ * 2. Removes excess padding in IE 8/9.
+ * 3. Removes excess padding in IE 7.
+ *    Known issue: excess padding remains in IE 6.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+  *height: 13px;
+  /* 3 */
+  *width: 13px;
+  /* 3 */ }
+
+/*
+ * 1. Addresses `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Addresses `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box; }
+
+/*
+ * Removes inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/*
+ * Removes inner padding and border in Firefox 3+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/*
+ * 1. Removes default vertical scrollbar in IE 6/7/8/9.
+ * 2. Improves readability and alignment in all browsers.
+ */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */ }
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/*
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+html, body, button, input, table, td, th {
+  font-family: "nta", Arial, sans-serif; }
+
+html, body, div, h1, h2, h3, h4, h5, h6, article, aside, footer, header, hgroup, nav, section {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline; }
+
+.group:before,
+.group:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden; }
+
+.group:after {
+  clear: both; }
+
+.group {
+  zoom: 1; }
+
+.content-fixed {
+  top: 0;
+  position: fixed; }
+
+.shim {
+  display: block; }
+
+html {
+  background: white; }
+
+body {
+  color: #0b0c0c;
+  line-height: 1.5;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased; }
+
+ol, ul, nav ol, nav ul {
+  list-style: inherit; }
+
+fieldset {
+  border: none;
+  padding: 0; }
+
+a,
+a:visited {
+  color: #2e3191; }
+
+a:hover {
+  color: #2e8aca; }
+
+a:active {
+  color: #2e8aca; }
+
+a[rel="external"]:after {
+  background-image: url(external-link.png);
+  background-repeat: no-repeat; }
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+    a[rel="external"]:after {
+      background-image: url(external-link-24x24.png);
+      background-size: 12px 400px; } }
+a[rel="external"]:after {
+  content: "\A0\A0\A0\A0";
+  background-position: right 6px; }
+a[rel="external"]:hover:after {
+  background-position: right -382px; }
+@media (max-width: 640px) {
+  a[rel="external"]:after {
+    content: "\A0\A0\A0\A0\A0";
+    background-position: right 3px; }
+  a[rel="external"]:hover:after {
+    background-position: right -385px; } }
+
+.external-link:after {
+  content: "\A0\A0\A0\A0\A0\A0\A0\A0";
+  background-position: right 0px; }
+.external-link:hover:after {
+  background-position: right 0px; }
+.external-link:after {
+  background-image: url(external-link-black-12x12.png);
+  background-repeat: no-repeat; }
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+    .external-link:after {
+      background-image: url(external-link-black-24x24.png);
+      background-size: 12px 400px; } }
+
+/*
+ * 1. Corrects text resizing oddly in IE6/7 when body font-size is set using em units
+ *    http://clagnut.com/blog/348/#c790
+ *    note - font-size reduced to 62.5% to allow simple rem/px font-sizing and fallback
+ *    http://snook.ca/archives/html_and_css/font-size-with-rem
+ * 2. Keeps page centred in all browsers regardless of content height
+ * 3. Removes Android and iOS tap highlight color to prevent entire container being highlighted
+ *    www.yuiblog.com/blog/2010/10/01/quick-tip-customizing-the-mobile-safari-tap-highlight-color/
+ */
+html {
+  font-size: 62.5%;
+  /* 1 */
+  overflow-y: scroll;
+  /* 2 */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  /* 3 */ }
+
+/*
+ * 1. Font-size increased to compensate for change to html element font-size in
+ *    order to support beta typography which was set in ems
+ *    (62.5% * 160% = 100%)
+ * 2. Addresses margins handled incorrectly in IE6/7
+ */
+body {
+  font-size: 160%;
+  /* 1 */
+  margin: 0;
+  /* 2 */ }
+
+b,
+strong {
+  font-weight: 600; }
+
+button {
+  *overflow: visible; }
+
+abbr[title] {
+  cursor: help; }
+
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: searchfield-cancel-button;
+  margin-right: 2px; }
+
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/* For image replacement */
+.ir {
+  display: block;
+  text-indent: -999em;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  text-align: left;
+  direction: ltr; }
+  .ir br {
+    display: none; }
+
+/* Hide for both screenreaders and browsers */
+.hidden {
+  display: none;
+  visibility: hidden; }
+
+/* Hide only visually, but have it available for screenreaders */
+.visuallyhidden {
+  position: absolute;
+  left: -9999em;
+  /*
+   * Extends the .visuallyhidden class to allow the element to be
+   * focusable when navigated to via the keyboard
+   */ }
+  .visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto; }
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible {
+  visibility: hidden; }
+
+/* Give a strong clear visual idea as to what is currently in focus */
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3); }
+
+a:focus {
+  background-color: #ffbf47;
+  outline: 3px solid #ffbf47; }
+
+input:focus,
+textarea:focus,
+select:focus,
+#global-header input:focus {
+  outline: 3px solid #ffbf47; }
+
+#global-header h1 a:focus {
+  background-color: transparent;
+  outline: none; }
+#global-header a:focus {
+  color: #0b0c0c; }
+
+/* Cross-browser shims
+
+  Ways of normalising properties across browsers.
+ */
+@-ms-viewport {
+  width: device-width; }
+
+@-o-viewport {
+  width: device-width; }
+
+/* Usage:
+   @include inline-block
+
+   or
+
+   @include inline-block("250px")
+
+   which gives a min-height to the inline-block elements.
+*/
+/* Contain floats usage:
+
+   .this-has-floated-children {
+     @extend %contain-floats;
+   }
+
+*/
+#global-header .header-wrapper:after, #global-header .header-wrapper .header-global:after, #global-header .header-wrapper .header-global .header-logo:after,
+#global-header .header-wrapper .header-global .site-search:after, #global-header form#search .content:after, #global-header .header-proposition #proposition-links:after {
+  content: "";
+  display: block;
+  clear: both; }
+
+#global-header {
+  background-color: #0b0c0c;
+  width: 100%; }
+  #global-header .header-wrapper {
+    max-width: 990px;
+    margin: 0 auto;
+    padding: 0.5em 15px; }
+    @media (max-width: 640px) {
+      #global-header .header-wrapper {
+        padding: 0.5em 0; } }
+    #global-header .header-wrapper .header-global .header-logo,
+    #global-header .header-wrapper .header-global .site-search {
+      width: 49%;
+      float: left; }
+      @media (min-width: 769px) {
+        #global-header .header-wrapper .header-global .header-logo,
+        #global-header .header-wrapper .header-global .site-search {
+          width: 33.33%; } }
+      @media screen and (max-width: 379px) {
+        #global-header .header-wrapper .header-global .header-logo,
+        #global-header .header-wrapper .header-global .site-search {
+          width: auto;
+          float: none; } }
+      #global-header .header-wrapper .header-global .header-logo .content,
+      #global-header .header-wrapper .header-global .site-search .content {
+        margin: 0 15px; }
+    #global-header .header-wrapper .header-global .header-logo {
+      margin: 5px 0 2px; }
+    #global-header .header-wrapper .header-global .site-search {
+      float: right; }
+  @media (min-width: 769px) {
+    #global-header.with-proposition .header-wrapper .header-global {
+      float: left;
+      width: 33.33%; }
+      #global-header.with-proposition .header-wrapper .header-global .header-logo,
+      #global-header.with-proposition .header-wrapper .header-global .site-search {
+        width: 100%; } }
+  @media (min-width: 769px) {
+    #global-header.with-proposition .header-wrapper .header-proposition {
+      width: 66.66%;
+      float: left; } }
+  #global-header.with-proposition .header-wrapper .header-proposition .content {
+    margin: 0 15px; }
+  #global-header.with-proposition #search {
+    margin-top: 4px; }
+  #global-header #logo {
+    float: left;
+    position: relative;
+    width: 166px;
+    height: 30px;
+    overflow: hidden; }
+    #global-header #logo img {
+      position: absolute;
+      left: -166px;
+      top: 0;
+      border: none;
+      /* scale oversized image to container bounds */
+      width: 200%;
+      height: 300%; }
+    #global-header #logo:hover img {
+      top: -30px; }
+  #global-header .search-toggle {
+    display: none; }
+    @media screen and (max-width: 379px) {
+      #global-header .search-toggle {
+        display: block;
+        float: right;
+        top: 0;
+        height: 30px;
+        width: 36px;
+        padding: 0;
+        margin: 0 15px;
+        overflow: hidden;
+        text-indent: -5000px;
+        background-color: #2b8cc4;
+        background-image: url(images/search-button.png);
+        background-repeat: no-repeat;
+        background-position: 0 50%;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none; }
+        #global-header .search-toggle:active {
+          top: 0; } }
+      @media only screen and (max-width: 379px) and (-webkit-min-device-pixel-ratio: 2), only screen and (max-width: 379px) and (min--moz-device-pixel-ratio: 2), only screen and (max-width: 379px) and (-o-min-device-pixel-ratio: 20 / 10), only screen and (max-width: 379px) and (min-device-pixel-ratio: 2), only screen and (max-width: 379px) and (min-resolution: 192dpi), only screen and (max-width: 379px) and (min-resolution: 2dppx) {
+        #global-header .search-toggle {
+          background-size: 52.5px 35px;
+          background-position: 100% 50%; } }
+    #global-header .search-toggle.js-hidden {
+      display: none; }
+  #global-header form#search .content {
+    position: relative;
+    background: #fff; }
+  #global-header form#search label {
+    float: left;
+    height: 35px;
+    line-height: 35px;
+    text-indent: 15px;
+    overflow: hidden;
+    display: block;
+    margin-right: 10px; }
+    .js-enabled #global-header form#search label {
+      float: none;
+      position: absolute;
+      left: 0;
+      top: 1px;
+      z-index: 1;
+      width: 100%;
+      margin-right: 0; }
+  #global-header form#search input {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+    width: 50%;
+    min-width: 0;
+    display: block;
+    margin: 0;
+    border: 0;
+    height: 35px;
+    padding: 6px 0;
+    -webkit-appearance: none;
+    -moz-appearance: none; }
+  #global-header form#search input#site-search-text {
+    font-family: "nta", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.4375;
+    font-weight: 300;
+    text-transform: none;
+    position: relative;
+    padding: 6px;
+    z-index: 3;
+    background: transparent; }
+    @media (max-width: 640px) {
+      #global-header form#search input#site-search-text {
+        font-size: 14px;
+        line-height: 1.76923; } }
+    #global-header form#search input#site-search-text.focus, #global-header form#search input#site-search-text:focus {
+      background: #fff; }
+    .js-enabled #global-header form#search input#site-search-text {
+      width: 86%;
+      width: -webkit-calc(100% - 37px);
+      width: calc(100% - 37px); }
+  #global-header form#search input.submit {
+    position: absolute;
+    z-index: 4;
+    right: 0;
+    top: 0;
+    width: 35px;
+    height: 35px;
+    border: 1px solid #2b8cc4;
+    border-width: 0 0 0 1px;
+    border-left-color: #222;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    overflow: hidden;
+    text-indent: -5000px;
+    color: white;
+    background-color: #2b8cc4;
+    background-image: url(images/search-button.png);
+    background-repeat: no-repeat;
+    background-position: 0 50%; }
+    @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+      #global-header form#search input.submit {
+        background-size: 52.5px 35px;
+        background-position: 100% 50%; } }
+    #global-header form#search input.submit:hover {
+      background-color: #3699d3; }
+  @media screen and (max-width: 379px) {
+    #global-header form#search {
+      display: none;
+      width: 100%; }
+      #global-header form#search #site-search-text {
+        width: 80%; } }
+  #global-header form#search.js-visible {
+    display: block; }
+  #global-header .header-proposition {
+    padding-top: 10px; }
+    @media (min-width: 769px) {
+      #global-header .header-proposition {
+        padding-top: 0; } }
+    #global-header .header-proposition #proposition-name {
+      font-family: "nta", Arial, sans-serif;
+      font-size: 24px;
+      line-height: 1.25;
+      font-weight: 400;
+      text-transform: none;
+      font-weight: bold;
+      color: white;
+      text-decoration: none; }
+      @media (max-width: 640px) {
+        #global-header .header-proposition #proposition-name {
+          font-size: 20px;
+          line-height: 1.2; } }
+    #global-header .header-proposition a.menu {
+      font-family: "nta", Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.25;
+      font-weight: 300;
+      text-transform: none;
+      color: white;
+      display: block;
+      float: right;
+      text-decoration: none;
+      padding-top: 6px; }
+      @media (max-width: 640px) {
+        #global-header .header-proposition a.menu {
+          font-size: 14px;
+          line-height: 1.14286; } }
+      @media (min-width: 769px) {
+        #global-header .header-proposition a.menu {
+          display: none; } }
+      #global-header .header-proposition a.menu:hover {
+        text-decoration: underline; }
+      #global-header .header-proposition a.menu:after {
+        display: inline-block;
+        font-size: 8px;
+        height: 8px;
+        padding-left: 5px;
+        vertical-align: middle;
+        content: " \25BC"; }
+      #global-header .header-proposition a.menu.js-hidden:after {
+        content: " \25B2"; }
+    #global-header .header-proposition #proposition-menu {
+      margin-top: 5px; }
+    #global-header .header-proposition #proposition-links {
+      clear: both;
+      margin: 2px 0 0 0;
+      padding: 0; }
+      .js-enabled #global-header .header-proposition #proposition-links {
+        display: none; }
+        @media (min-width: 769px) {
+          .js-enabled #global-header .header-proposition #proposition-links {
+            display: block; } }
+        .js-enabled #global-header .header-proposition #proposition-links.js-visible {
+          display: block; }
+      #global-header .header-proposition #proposition-links li {
+        float: left;
+        width: 50%;
+        padding: 3px 0;
+        border-bottom: 1px solid #2e3133; }
+        @media (min-width: 769px) {
+          #global-header .header-proposition #proposition-links li {
+            display: block;
+            width: auto;
+            padding: 0 15px 0 0;
+            border-bottom: 0; }
+            #global-header .header-proposition #proposition-links li.clear-child {
+              clear: left; } }
+        #global-header .header-proposition #proposition-links li a {
+          color: white;
+          text-decoration: none;
+          font-family: "nta", Arial, sans-serif;
+          font-size: 14px;
+          line-height: 1.42857;
+          font-weight: 400;
+          text-transform: none;
+          font-weight: 700; }
+          @media (max-width: 640px) {
+            #global-header .header-proposition #proposition-links li a {
+              font-size: 12px;
+              line-height: 1.25; } }
+          @media (min-width: 769px) {
+            #global-header .header-proposition #proposition-links li a {
+              font-family: "nta", Arial, sans-serif;
+              font-size: 16px;
+              line-height: 1.25;
+              font-weight: 300;
+              text-transform: none;
+              font-weight: 700;
+              line-height: 23px; } }
+            @media (min-width: 769px) and (max-width: 640px) {
+              #global-header .header-proposition #proposition-links li a {
+                font-size: 14px;
+                line-height: 1.14286; } }
+          #global-header .header-proposition #proposition-links li a:hover {
+            text-decoration: underline; }
+          #global-header .header-proposition #proposition-links li a.active {
+            color: #28a197; }
+
+/* Global cookie message */
+.js-enabled #global-cookie-message {
+  display: none;
+  /* shown with JS, always on for non-JS */ }
+
+#global-cookie-message,
+.beta-notice {
+  padding: 0.5em 2em; }
+  #global-cookie-message p,
+  .beta-notice p {
+    font-family: "nta", Arial, sans-serif;
+    font-size: 19px;
+    line-height: 1.31579;
+    font-weight: 400;
+    text-transform: none;
+    margin: 0 auto;
+    max-width: 960px; }
+    @media (max-width: 640px) {
+      #global-cookie-message p,
+      .beta-notice p {
+        font-size: 16px;
+        line-height: 1.25; } }
+  @media (max-width: 640px) {
+    #global-cookie-message,
+    .beta-notice {
+      padding: 0.5em 1em; } }
+
+#global-cookie-message {
+  background-color: #d5e8f3; }
+
+.beta-notice {
+  background-color: #f47738;
+  color: #fff; }
+
+/* Global footer */
+#footer {
+  background-color: #dee0e2;
+  border-top: 1px solid #a1acb2; }
+  #footer .footer-wrapper {
+    max-width: 60em;
+    margin: 0 auto;
+    padding: 60px 1em 0 1em; }
+    @media (max-width: 640px) {
+      #footer .footer-wrapper {
+        padding-top: 20px; } }
+  #footer a {
+    color: #454a4c; }
+    #footer a:hover {
+      color: #171819; }
+  #footer h2 {
+    font-family: "nta", Arial, sans-serif;
+    font-size: 24px;
+    line-height: 1.25;
+    font-weight: 400;
+    text-transform: none;
+    font-weight: bold;
+    color: #171819;
+    margin: 0; }
+    @media (max-width: 640px) {
+      #footer h2 {
+        font-size: 20px;
+        line-height: 1.2; } }
+    #footer h2 a {
+      color: inherit; }
+  #footer .footer-categories {
+    font-size: 0;
+    float: left;
+    padding: 0 0 60px 0;
+    width: 100%; }
+    @media (max-width: 640px) {
+      #footer .footer-categories {
+        padding: 20px 0; } }
+    #footer .footer-categories .footer-explore {
+      float: left;
+      margin-right: 7%;
+      width: 62%; }
+      @media (max-width: 640px) {
+        #footer .footer-categories .footer-explore {
+          display: block;
+          margin: 0 0 30px 0;
+          width: 100%; } }
+    #footer .footer-categories ul {
+      font-family: "nta", Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.25;
+      font-weight: 300;
+      text-transform: none;
+      list-style: none;
+      border: 1px solid #a1acb2;
+      border-width: 1px 0 0 0;
+      margin: 20px 0 0 0;
+      padding: 20px 0 0 0;
+      min-height: 210px;
+      vertical-align: top; }
+      @media (max-width: 640px) {
+        #footer .footer-categories ul {
+          font-size: 14px;
+          line-height: 1.14286; } }
+      @media (max-width: 640px) {
+        #footer .footer-categories ul {
+          border-width: 0;
+          min-height: 0; } }
+      #footer .footer-categories ul li {
+        display: block;
+        float: left;
+        clear: left;
+        margin: 0 0 15px 0;
+        width: 45.5%; }
+        #footer .footer-categories ul li:nth-child(even) {
+          float: right;
+          clear: none; }
+        @media (max-width: 640px) {
+          #footer .footer-categories ul li {
+            float: none;
+            width: 100%;
+            margin-left: 0; }
+            #footer .footer-categories ul li:nth-child(even) {
+              float: none; }
+            #footer .footer-categories ul li:first-child, #footer .footer-categories ul li:nth-child(2) {
+              border-top: none;
+              padding-top: 0; } }
+    #footer .footer-categories .footer-inside-government {
+      float: left;
+      width: 31%; }
+      #footer .footer-categories .footer-inside-government ul {
+        margin-right: 0; }
+        @media (max-width: 640px) {
+          #footer .footer-categories .footer-inside-government ul {
+            margin: 20px 0 0 0;
+            width: 100%; } }
+        #footer .footer-categories .footer-inside-government ul li {
+          margin-right: 0;
+          width: 100%; }
+          #footer .footer-categories .footer-inside-government ul li:nth-child(even) {
+            float: none;
+            clear: none; }
+      @media (max-width: 640px) {
+        #footer .footer-categories .footer-inside-government {
+          width: 100%;
+          display: block;
+          padding: 0;
+          margin: 0;
+          border: none;
+          min-height: 0; } }
+  #footer .footer-meta {
+    clear: both;
+    font-size: 0;
+    color: #454a4c;
+    border: 1px solid #a1acb2;
+    border-width: 1px 0 0 0;
+    margin: 60px 0 0 0;
+    padding: 30px 0 60px; }
+    @media (max-width: 640px) {
+      #footer .footer-meta {
+        margin: 0; } }
+    #footer .footer-meta .footer-meta-inner {
+      display: inline-block;
+      vertical-align: bottom;
+      width: 75%; }
+      @media (max-width: 640px) {
+        #footer .footer-meta .footer-meta-inner {
+          display: block;
+          width: 100%; } }
+      #footer .footer-meta .footer-meta-inner ul {
+        font-family: "nta", Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        font-weight: 300;
+        text-transform: none;
+        display: inline-block;
+        list-style: none;
+        margin: 0 0 1em;
+        padding: 0; }
+        @media (max-width: 640px) {
+          #footer .footer-meta .footer-meta-inner ul {
+            font-size: 14px;
+            line-height: 1.5; } }
+        #footer .footer-meta .footer-meta-inner ul li {
+          display: inline-block;
+          margin: 0 15px 0 0; }
+        @media (max-width: 640px) {
+          #footer .footer-meta .footer-meta-inner ul {
+            width: auto;
+            margin: 0 0 1.5em 0; } }
+      #footer .footer-meta .footer-meta-inner .open-government-licence {
+        clear: left;
+        position: relative;
+        padding-left: 53px; }
+        @media (max-width: 640px) {
+          #footer .footer-meta .footer-meta-inner .open-government-licence {
+            padding-left: 0; } }
+        #footer .footer-meta .footer-meta-inner .open-government-licence h2 {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 41px;
+          height: 100%; }
+          @media (max-width: 640px) {
+            #footer .footer-meta .footer-meta-inner .open-government-licence h2 {
+              position: static;
+              width: auto;
+              margin-bottom: 1em; } }
+          #footer .footer-meta .footer-meta-inner .open-government-licence h2 a, #footer .footer-meta .footer-meta-inner .open-government-licence h2 img {
+            display: block;
+            width: 43px;
+            height: 17px; }
+        #footer .footer-meta .footer-meta-inner .open-government-licence p {
+          font-family: "nta", Arial, sans-serif;
+          font-size: 16px;
+          line-height: 1.25;
+          font-weight: 300;
+          text-transform: none;
+          margin: 0;
+          padding-top: 0.1em; }
+          @media (max-width: 640px) {
+            #footer .footer-meta .footer-meta-inner .open-government-licence p {
+              font-size: 14px;
+              line-height: 1.14286; } }
+          #footer .footer-meta .footer-meta-inner .open-government-licence p a {
+            font-family: "nta", Arial, sans-serif;
+            font-size: 14px;
+            line-height: 1.42857;
+            font-weight: 400;
+            text-transform: none; }
+            @media (max-width: 640px) {
+              #footer .footer-meta .footer-meta-inner .open-government-licence p a {
+                font-size: 12px;
+                line-height: 1.25; } }
+            @media (max-width: 640px) {
+              #footer .footer-meta .footer-meta-inner .open-government-licence p a {
+                font-size: 1em; } }
+    #footer .footer-meta .copyright {
+      font-family: "nta", Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.25;
+      font-weight: 300;
+      text-transform: none;
+      display: inline-block;
+      float: none;
+      text-align: inherit;
+      width: 25%;
+      padding-top: 15px; }
+      @media (max-width: 640px) {
+        #footer .footer-meta .copyright {
+          font-size: 14px;
+          line-height: 1.14286; } }
+      #footer .footer-meta .copyright a {
+        display: block;
+        padding: 115px 0 0 0;
+        background: transparent url(images/govuk-crest.png) no-repeat 100% 0;
+        text-align: right;
+        text-decoration: none; }
+        @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+          #footer .footer-meta .copyright a {
+            background-image: url(images/govuk-crest-2x.png);
+            background-size: 125px 102px; } }
+      @media (max-width: 640px) {
+        #footer .footer-meta .copyright {
+          width: 100%;
+          display: block;
+          padding: 0;
+          margin: 30px 0 0 0; }
+          #footer .footer-meta .copyright a {
+            text-align: center;
+            background-position: 50% 0%; } }
