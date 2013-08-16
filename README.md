@@ -1,5 +1,4 @@
 #Govuk Templates for Play Framework
-===================
 
 Compiled govuk templates for Play Framework.
 
