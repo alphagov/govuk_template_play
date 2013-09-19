@@ -3,21 +3,6 @@
   var root = this;
   if(typeof root.GOVUK === 'undefined') { root.GOVUK = {}; }
 
-  GOVUK.addCookieMessage = function () {
-    var message = document.getElementById('global-cookie-message'),
-        hasCookieMessage = (message && GOVUK.cookie('seen_cookie_message') === null);
-
-    if (hasCookieMessage) {
-      message.style.display = 'block';
-      GOVUK.cookie('seen_cookie_message', 'yes', { days: 28 });
-    }
-  };
-}).call(this);
-(function () {
-  "use strict"
-  var root = this;
-  if(typeof root.GOVUK === 'undefined') { root.GOVUK = {}; }
-
   /*
     Cookie methods
     ==============
@@ -74,31 +59,22 @@
     return null;
   };
 }).call(this);
-$(document).ready(function() {
-  $('.print-link a').attr('target', '_blank');
+(function () {
+  "use strict"
+  var root = this;
+  if(typeof root.GOVUK === 'undefined') { root.GOVUK = {}; }
 
-  // header search toggle
-  $('.js-header-toggle').on('click', function(e) {
-    e.preventDefault();
-    $($(e.target).attr('href')).toggleClass('js-visible');
-    $(this).toggleClass('js-hidden');
-  });
+  GOVUK.addCookieMessage = function () {
+    var message = document.getElementById('global-cookie-message'),
+        hasCookieMessage = (message && GOVUK.cookie('seen_cookie_message') === null);
 
-  var $searchFocus = $('.js-search-focus');
-  $searchFocus.each(function(i, el){
-    if($(el).val() !== ''){
-      $(el).addClass('focus');
+    if (hasCookieMessage) {
+      message.style.display = 'block';
+      GOVUK.cookie('seen_cookie_message', 'yes', { days: 28 });
     }
-  });
-  $searchFocus.on('focus', function(e){
-    $(e.target).addClass('focus');
-  });
-  $searchFocus.on('blur', function(e){
-    if($(e.target).val() === ''){
-      $(e.target).removeClass('focus');
-    }
-  });
-
+  };
+}).call(this);
+(function() {
   // fix for printing bug in Windows Safari
   var windowsSafari = (window.navigator.userAgent.match(/(\(Windows[\s\w\.]+\))[\/\(\s\w\.\,\)]+(Version\/[\d\.]+)\s(Safari\/[\d\.]+)/) !== null),
       style;
@@ -115,7 +91,7 @@ $(document).ready(function() {
   if (window.GOVUK && GOVUK.addCookieMessage) {
     GOVUK.addCookieMessage();
   }
-});
+}).call(this);
 
 
 

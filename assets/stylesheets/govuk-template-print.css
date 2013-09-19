@@ -288,8 +288,6 @@ img {
       border: none; }
     #global-header #logo:after {
       display: none; }
-  #global-header #search, #global-header .search-toggle {
-    display: none; }
 
 .done-questions .start-again {
   display: none; }

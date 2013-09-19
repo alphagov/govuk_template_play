@@ -68,16 +68,9 @@
             <a href="https://www.gov.uk/" title="Go to the GOV.UK homepage" id="logo" class="content">
               <img src="@routes.Template.at("images/gov.uk_logotype-2x.png")" alt="GOV.UK">
             </a>
-            <a href="#search" class="search-toggle js-header-toggle">Search</a>
           </div>
 
-          <form id="search" class="site-search" action="https://www.gov.uk/search" method="get" role="search">
-            <div class="content">
-              <label for="site-search-text">Search</label>
-              <input type="search" name="q" id="site-search-text" title="Search" class="js-search-focus">
-              <input class="submit" type="submit" value="Search" />
-            </div>
-          </form>
+          
         </div>
       </div>
     </header>
@@ -85,7 +78,7 @@
 
     <div id="global-cookie-message">
       
-        <p>GOV.UK uses cookies to make the site simpler. <a href="https://www.gov.uk/support/cookies">Find out more about cookies</a></p>
+        <p>GOV.UK uses cookies to make the site simpler. <a href="https://www.gov.uk/help/cookies">Find out more about cookies</a></p>
       
     </div>
 
@@ -117,7 +110,6 @@
 
     <div id="global-app-error" class="app-error hidden"></div>
 
-    <script src="@routes.Template.at("javascripts/vendor/jquery/jquery-1.7.2.js")" type="text/javascript"></script>
     <script src="@routes.Template.at("javascripts/govuk-template.js")" type="text/javascript"></script>
 
     @bodyEnd
