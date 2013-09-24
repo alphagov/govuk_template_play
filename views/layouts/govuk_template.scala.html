@@ -1,4 +1,4 @@
-@(title: Option[String], bodyClasses: Option[String])(head:Html, bodyEnd:Html)(content:Html)
+@(title: Option[String], bodyClasses: Option[String])(head:Html, bodyEnd:Html, insideHeader:Html, footerTop:Html, footerLinks:Html)(content:Html)
 <!DOCTYPE html>
 <!--[if lt IE 9]><html class="lte-ie8" lang="en"><![endif]-->
 <!--[if gt IE 8]><!--><html lang="en"><!--<![endif]-->
@@ -75,7 +75,7 @@
             </a>
           </div>
 
-          
+          @insideHeader
         </div>
       </div>
     </header>
@@ -93,11 +93,11 @@
     <footer class="group js-footer" id="footer" role="contentinfo">
 
       <div class="footer-wrapper">
-        
+        @footerTop
 
         <div class="footer-meta">
           <div class="footer-meta-inner">
-            
+            @footerLinks
 
             <div class="open-government-licence">
               <h2><a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/2"><img src="@routes.Template.at("images/open-government-licence_2x.png")" alt="OGL"></a></h2>
