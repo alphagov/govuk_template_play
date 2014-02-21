@@ -82,7 +82,7 @@ Example usage:
 
 */
 /* local styleguide includes */
-/* New Greys */
+/* Old depricated greys, new things should use the toolkit greys */
 html, body, button, input, table, td, th {
   font-family: "nta", Arial, sans-serif; }
 
@@ -136,10 +136,10 @@ fieldset {
   padding: 0; }
 
 a:link {
-  color: #2e3191; }
+  color: #005ea5; }
 
 a:visited {
-  color: #2e3191; }
+  color: #2e8aca; }
 
 a:hover {
   color: #2e8aca; }
@@ -304,6 +304,7 @@ a:focus {
 input:focus,
 textarea:focus,
 select:focus,
+button:focus,
 #global-header input:focus {
   outline: 3px solid #ffbf47; }
 
@@ -592,10 +593,17 @@ select:focus,
           top: 0;
           width: 41px;
           height: 100%; }
-          #footer .footer-meta .footer-meta-inner .open-government-licence h2 a, #footer .footer-meta .footer-meta-inner .open-government-licence h2 img {
+          #footer .footer-meta .footer-meta-inner .open-government-licence h2 a {
             display: block;
-            width: 43px;
-            height: 17px; }
+            width: 41px;
+            height: 17px;
+            overflow: hidden;
+            text-indent: -999em;
+            background: url(images/open-government-licence.png) 0 0 no-repeat; }
+            @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+              #footer .footer-meta .footer-meta-inner .open-government-licence h2 a {
+                background-image: url(images/open-government-licence_2x.png);
+                background-size: 41px 17px; } }
         #footer .footer-meta .footer-meta-inner .open-government-licence p {
           font-family: "nta", Arial, sans-serif;
           font-size: 16px;
