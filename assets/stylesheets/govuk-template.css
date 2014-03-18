@@ -358,7 +358,6 @@ button:focus,
       #global-header .header-wrapper {
         padding: 0.5em 0; } }
     #global-header .header-wrapper .header-global .header-logo {
-      width: 49%;
       float: left; }
       @media (min-width: 769px) {
         #global-header .header-wrapper .header-global .header-logo {

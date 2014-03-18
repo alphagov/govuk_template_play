@@ -356,7 +356,6 @@ button:focus,
     padding: 0.5em 15px;
     width: 960px; }
     #global-header .header-wrapper .header-global .header-logo {
-      width: 49%;
       float: left;
       width: 33.33%; }
       @media screen and (max-width: 379px) {
