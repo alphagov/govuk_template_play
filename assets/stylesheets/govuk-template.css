@@ -351,6 +351,7 @@ button:focus,
   background-color: #0b0c0c;
   width: 100%; }
   #global-header .header-wrapper {
+    background-color: #0b0c0c;
     max-width: 990px;
     margin: 0 auto;
     padding: 0.5em 15px; }
@@ -547,12 +548,13 @@ button:focus,
   background-color: #dee0e2;
   border-top: 1px solid #a1acb2; }
   #footer .footer-wrapper {
-    max-width: 60em;
+    background-color: #dee0e2;
+    max-width: 990px;
     margin: 0 auto;
-    padding: 60px 1em 0 1em; }
-    @media (max-width: 640px) {
+    padding: 20px 0 0; }
+    @media (min-width: 641px) {
       #footer .footer-wrapper {
-        padding-top: 20px; } }
+        padding: 60px 15px 0; } }
   #footer a {
     color: #454a4c; }
     #footer a:hover {
@@ -576,7 +578,7 @@ button:focus,
     clear: both;
     font-size: 0;
     color: #454a4c;
-    padding-bottom: 60px; }
+    padding: 0 15px 60px; }
     @media (max-width: 640px) {
       #footer .footer-meta {
         margin: 0; } }
@@ -650,19 +652,6 @@ button:focus,
             #footer .footer-meta .footer-meta-inner .open-government-licence p {
               font-size: 14px;
               line-height: 1.14286; } }
-          #footer .footer-meta .footer-meta-inner .open-government-licence p a {
-            font-family: "nta", Arial, sans-serif;
-            font-size: 14px;
-            line-height: 1.42857;
-            font-weight: 400;
-            text-transform: none; }
-            @media (max-width: 640px) {
-              #footer .footer-meta .footer-meta-inner .open-government-licence p a {
-                font-size: 12px;
-                line-height: 1.25; } }
-            @media (max-width: 640px) {
-              #footer .footer-meta .footer-meta-inner .open-government-licence p a {
-                font-size: 1em; } }
     #footer .footer-meta .copyright {
       font-family: "nta", Arial, sans-serif;
       font-size: 16px;
