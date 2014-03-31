@@ -347,6 +347,12 @@ button:focus,
   display: block;
   clear: both; }
 
+@-ms-viewport {
+  width: device-width; }
+
+@-o-viewport {
+  width: device-width; }
+
 #global-header {
   background-color: #0b0c0c;
   width: 100%; }
@@ -525,7 +531,7 @@ button:focus,
   /* shown with JS, always on for non-JS */ }
 
 #global-cookie-message {
-  padding: 0.5em 2em;
+  padding: 8px 15px;
   background-color: #d5e8f3; }
   #global-cookie-message p {
     font-family: "nta", Arial, sans-serif;
@@ -539,9 +545,10 @@ button:focus,
       #global-cookie-message p {
         font-size: 16px;
         line-height: 1.25; } }
-  @media (max-width: 640px) {
+  @media (min-width: 641px) {
     #global-cookie-message {
-      padding: 0.5em 1em; } }
+      padding-left: 30px;
+      padding-right: 30px; } }
 
 /* Global footer */
 #footer {

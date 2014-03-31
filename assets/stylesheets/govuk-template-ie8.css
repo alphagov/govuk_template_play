@@ -341,6 +341,12 @@ button:focus,
   display: block;
   clear: both; }
 
+@-ms-viewport {
+  width: device-width; }
+
+@-o-viewport {
+  width: device-width; }
+
 #global-header {
   background-color: #0b0c0c;
   width: 100%; }
@@ -503,8 +509,10 @@ button:focus,
   /* shown with JS, always on for non-JS */ }
 
 #global-cookie-message {
-  padding: 0.5em 2em;
-  background-color: #d5e8f3; }
+  padding: 8px 15px;
+  background-color: #d5e8f3;
+  padding-left: 30px;
+  padding-right: 30px; }
   #global-cookie-message p {
     font-family: "nta", Arial, sans-serif;
     font-size: 19px;
