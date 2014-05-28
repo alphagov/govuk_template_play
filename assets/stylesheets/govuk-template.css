@@ -422,6 +422,9 @@ button:focus,
         content: " \25B2"; }
     #global-header .header-proposition #proposition-menu {
       margin-top: 5px; }
+      @media (min-width: 769px) {
+        #global-header .header-proposition #proposition-menu.no-proposition-name {
+          margin-top: 37px; } }
     #global-header .header-proposition #proposition-links {
       clear: both;
       margin: 2px 0 0 0;
@@ -475,7 +478,9 @@ button:focus,
           #global-header .header-proposition #proposition-links li a:hover {
             text-decoration: underline; }
           #global-header .header-proposition #proposition-links li a.active {
-            color: #28a197; }
+            color: #1d8feb; }
+          #global-header .header-proposition #proposition-links li a:focus {
+            color: #0b0c0c; }
 
 /* Global header bar */
 #global-header-bar {
