@@ -1,7 +1,7 @@
-@(title: Option[String], bodyClasses: Option[String])(head:Html, bodyEnd:Html, insideHeader:Html, afterHeader:Html, footerTop:Html, footerLinks:Html)(content:Html)
+@(title: Option[String], bodyClasses: Option[String], htmlLang: Option[String] = None)(head:Html, bodyEnd:Html, insideHeader:Html, afterHeader:Html, footerTop:Html, footerLinks:Html, headerClass:Html = Html.empty, propositionHeader:Html = Html.empty)(content:Html)
 <!DOCTYPE html>
-<!--[if lt IE 9]><html class="lte-ie8" lang="en"><![endif]-->
-<!--[if gt IE 8]><!--><html lang="en"><!--<![endif]-->
+<!--[if lt IE 9]><html class="lte-ie8" lang="@htmlLang.getOrElse("en")"><![endif]-->
+<!--[if gt IE 8]><!--><html lang="@htmlLang.getOrElse("en")"><!--<![endif]-->
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 
@@ -41,14 +41,14 @@
 
     <link rel="shortcut icon" href="@routes.Template.at("images/favicon.ico")" type="image/x-icon" />
 
-    <!-- For third-generation iPad with high-resolution Retina display: -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="@routes.Template.at("images/apple-touch-icon-144x144.png")">
-    <!-- For iPhone with high-resolution Retina display: -->
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="@routes.Template.at("images/apple-touch-icon-114x114.png")">
-    <!-- For first- and second-generation iPad: -->
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="@routes.Template.at("images/apple-touch-icon-72x72.png")">
-    <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
-    <link rel="apple-touch-icon-precomposed" href="@routes.Template.at("images/apple-touch-icon-57x57.png")">
+    <!-- Size for iPad and iPad mini (high resolution) -->
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="@routes.Template.at("images/apple-touch-icon-152x152.png")">
+    <!-- Size for iPhone and iPod touch (high resolution) -->
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="@routes.Template.at("images/apple-touch-icon-120x120.png")">
+    <!-- Size for iPad 2 and iPad mini (standard resolution) -->
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="@routes.Template.at("images/apple-touch-icon-76x76.png")">
+    <!-- Default non-defined size, also used for Android 2.1+ devices -->
+    <link rel="apple-touch-icon-precomposed" href="@routes.Template.at("images/apple-touch-icon-60x60.png")">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta property="og:image" content="@routes.Template.at("images/opengraph-image.png")">
@@ -77,7 +77,7 @@
     <!--end global-cookie-message-->
 
     
-    <header role="banner" id="global-header" class="@header_class">
+    <header role="banner" id="global-header" class="@headerClass">
       <div class="header-wrapper">
         <div class="header-global">
           <div class="header-logo">
