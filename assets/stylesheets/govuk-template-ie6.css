@@ -97,12 +97,19 @@ html {
   /* 1 */
   background-color: #dee0e2; }
 
+/*
+  Force the scrollbar to always display in IE10/11
+ */
+html {
+  -ms-overflow-style: scrollbar; }
+
 body {
   background: white;
   color: #0b0c0c;
   line-height: 1.5;
   font-weight: 400;
-  -webkit-font-smoothing: antialiased; }
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
 
 ol, ul, nav ol, nav ul {
   list-style: inherit; }
