@@ -1,4 +1,4 @@
-@(title: Option[String], bodyClasses: Option[String], htmlLang: Option[String] = None)(head:Html, bodyEnd:Html, insideHeader:Html, afterHeader:Html, footerTop:Html, footerLinks:Html, headerClass:Html = Html.empty, propositionHeader:Html = Html.empty)(content:Html)
+@(title: Option[String], bodyClasses: Option[String], htmlLang: Option[String] = None)(head:Html, bodyStart:Html, bodyEnd:Html, insideHeader:Html, afterHeader:Html, footerTop:Html, footerLinks:Html, headerClass:Html = Html.empty, propositionHeader:Html = Html.empty)(content:Html)
 <!DOCTYPE html>
 <!--[if lt IE 9]><html class="lte-ie8" lang="@htmlLang.getOrElse("en")"><![endif]-->
 <!--[if gt IE 8]><!--><html lang="@htmlLang.getOrElse("en")"><!--<![endif]-->
@@ -58,6 +58,8 @@
 
   <body class="@bodyClasses.getOrElse("")">
     <script type="text/javascript">document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+    @bodyStart
 
     <div id="skiplink-container">
       <div>
