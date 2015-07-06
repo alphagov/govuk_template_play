@@ -1,4 +1,4 @@
-@(title: Option[String], bodyClasses: Option[String], htmlLang: Option[String] = None)(head:Html, bodyStart:Html, bodyEnd:Html, insideHeader:Html, afterHeader:Html, footerTop:Html, footerLinks:Html, headerClass:Html = Html.empty, propositionHeader:Html = Html.empty, homepageUrl:Html = Html.empty, globalHeaderText:Html = Html.empty, cookieMessage:Html = Html.empty)(content:Html)
+@(title: Option[String], bodyClasses: Option[String], htmlLang: Option[String] = None)(head:Html, bodyStart:Html, bodyEnd:Html, insideHeader:Html, afterHeader:Html, footerTop:Html, footerLinks:Html, headerClass:Html = Html.empty, propositionHeader:Html = Html.empty, homepageUrl:Html = Html.empty, globalHeaderText:Html = Html.empty, cookieMessage:Html = Html.empty, skipLinkMessage:Html, logoLinkTitle:Html, licenceMessage:Html, crownCopyrightMessage:Html)(content:Html)
 <!DOCTYPE html>
 <!--[if lt IE 9]><html class="lte-ie8" lang="@htmlLang.getOrElse("en")"><![endif]-->
 <!--[if gt IE 8]><!--><html lang="@htmlLang.getOrElse("en")"><!--<![endif]-->
@@ -63,18 +63,13 @@
 
     <div id="skiplink-container">
       <div>
-        <a href="#content" class="skiplink">Skip to main content</a>
+        <a href="#content" class="skiplink">@skipLinkMessage.getOrElse("Skip to main content")</a>
       </div>
     </div>
 
     <div id="global-cookie-message">
       
-                if(@cookieMessage) {
-          @cookieMessage
-        } else {
-          <p>GOV.UK uses cookies to make the site simpler. <a href="https://www.gov.uk/help/cookies">Find out more about cookies</a></p>
-        }
-
+        @cookieMessage.getOrElse('<p>GOV.UK uses cookies to make the site simpler. <a href="https://www.gov.uk/help/cookies">Find out more about cookies</a></p>')
       
     </div>
     <!--end global-cookie-message-->
@@ -84,7 +79,7 @@
       <div class="header-wrapper">
         <div class="header-global">
           <div class="header-logo">
-            <a href="@homepageUrl.getOrElse("https://www.gov.uk/")" title="Go to the GOV.UK homepage" id="logo" class="content">
+            <a href="@homepageUrl.getOrElse("https://www.gov.uk/")" title="@logoLinkTitle.getOrElse("Go to the GOV.UK homepage")" id="logo" class="content">
               <img src="@routes.Template.at("images/gov.uk_logotype_crown.png")" width="35" height="31" alt=""> @globalHeaderText.getOrElse("GOV.UK")
             </a>
           </div>
@@ -114,12 +109,14 @@
 
             <div class="open-government-licence">
               <p class="logo"><a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence</a></p>
-              <p>All content is available under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence v3.0</a>, except where otherwise stated</p>
+              
+                @licenceMessage
+              
             </div>
           </div>
 
           <div class="copyright">
-            <a href="https://www.nationalarchives.gov.uk/information-management/our-services/crown-copyright.htm">&copy; Crown copyright</a>
+            <a href="http://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/copyright-and-re-use/crown-copyright/">@crownCopyrightMessage.getOrElse("&copy; Crown copyright")</a>
           </div>
         </div>
       </div>
