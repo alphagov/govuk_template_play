@@ -237,6 +237,7 @@ input[type="search"]::-webkit-search-decoration {
   visibility: hidden; }
 
 /* Hide only visually, but have it available for screenreaders */
+.visually-hidden,
 .visuallyhidden {
   position: absolute;
   left: -9999em;
@@ -244,7 +245,9 @@ input[type="search"]::-webkit-search-decoration {
    * Extends the .visuallyhidden class to allow the element to be
    * focusable when navigated to via the keyboard
    */ }
-  .visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+  .visually-hidden.focusable:active, .visually-hidden.focusable:focus,
+  .visuallyhidden.focusable:active,
+  .visuallyhidden.focusable:focus {
     clip: auto;
     height: auto;
     margin: 0;
@@ -383,8 +386,6 @@ button:focus,
     #global-header #logo:hover, #global-header #logo:focus {
       text-decoration: none;
       border-bottom-color: white; }
-    #global-header #logo:active {
-      color: #2b8cc4; }
   #global-header .header-proposition {
     padding-top: 10px;
     padding-top: 0; }
