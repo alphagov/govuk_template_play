@@ -65,6 +65,9 @@
   width: device-width; }
 
 /* local styleguide includes */
+@-ms-viewport {
+  width: device-width; }
+
 html, body, button, input, table, td, th {
   font-family: "nta", Arial, sans-serif; }
 
@@ -287,7 +290,8 @@ a:focus {
   left: -9999em; }
 
 .skiplink:focus {
-  position: static; }
+  left: 0;
+  z-index: 1; }
 
 #skiplink-container {
   text-align: center;
