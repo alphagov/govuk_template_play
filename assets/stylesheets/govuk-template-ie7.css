@@ -572,7 +572,7 @@ button:focus,
     font-weight: 400;
     text-transform: none;
     font-weight: bold;
-    color: #454a4c;
+    color: #0b0c0c;
     margin: 0; }
     @media (max-width: 640px) {
       #footer h2 {
