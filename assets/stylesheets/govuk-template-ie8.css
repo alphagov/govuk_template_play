@@ -249,6 +249,10 @@ input[type="search"]::-webkit-search-decoration {
 .visuallyhidden {
   position: absolute;
   left: -9999em;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
   /*
    * Extends the .visuallyhidden class to allow the element to be
    * focusable when navigated to via the keyboard
