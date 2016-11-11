@@ -243,10 +243,14 @@ a:focus {
 input:focus,
 textarea:focus,
 select:focus,
-button:focus,
-#global-header input:focus {
-  outline: 3px solid #ffbf47; }
+button:focus {
+  outline: 3px solid #ffbf47;
+  outline-offset: 0; }
 
+#global-header input[type=search]:focus {
+  outline: 3px solid #ffbf47;
+  /* Focus appears inside the input */
+  outline-offset: -2px; }
 #global-header h1 a:focus {
   background-color: transparent;
   outline: none; }
