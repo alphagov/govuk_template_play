@@ -211,7 +211,10 @@ a:focus {
 /* Make skiplinks visible when they are tabbed to */
 .skiplink {
   position: absolute;
-  left: -9999em; }
+  left: -9999em;
+  /* Default link colour doesn't have enough contrast against $focus-colour */ }
+  .skiplink:focus, .skiplink:visited {
+    color: #0b0c0c; }
 
 .skiplink:focus {
   left: 0;

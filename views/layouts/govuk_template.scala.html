@@ -1,4 +1,4 @@
-@(title: Option[String], bodyClasses: Option[String], htmlLang: Option[String] = None)(head:Html, bodyStart:Html, bodyEnd:Html, insideHeader:Html, afterHeader:Html, footerTop:Html, footerLinks:Html, headerClass:Html = Html.empty, propositionHeader:Html = Html.empty, homepageUrl:Html = Html.empty, globalHeaderText:Html = Html.empty, cookieMessage:Html = Html.empty, skipLinkMessage:Html, logoLinkTitle:Html, licenceMessage:Html, crownCopyrightMessage:Html)(content:Html)
+@(title: Option[String], bodyClasses: Option[String], htmlLang: Option[String] = None)(head:Html, bodyStart:Html, bodyEnd:Html, insideHeader:Html, afterHeader:Html, footerTop:Html, footerLinks:Html, headerClass:Html = HtmlFormat.empty, propositionHeader:Html = HtmlFormat.empty, homepageUrl:Option[Html] = None, globalHeaderText:Option[Html] = None, cookieMessage: Option[Html] = None, skipLinkMessage:Option[Html], logoLinkTitle:Option[Html] = None, licenceMessage:Html, crownCopyrightMessage:Option[Html])(content:Html)
 <!DOCTYPE html>
 <!--[if lt IE 9]><html class="lte-ie8" lang="@htmlLang.getOrElse("en")"><![endif]-->
 <!--[if gt IE 8]><!--><html lang="@htmlLang.getOrElse("en")"><!--<![endif]-->
@@ -42,7 +42,7 @@
 
     <div id="global-cookie-message">
       
-        @cookieMessage.getOrElse('<p>GOV.UK uses cookies to make the site simpler. <a href="https://www.gov.uk/help/cookies">Find out more about cookies</a></p>')
+        @cookieMessage.getOrElse("<p>GOV.UK uses cookies to make the site simpler. <a href=\"https://www.gov.uk/help/cookies\">Find out more about cookies</a></p>")
       
     </div>
 
