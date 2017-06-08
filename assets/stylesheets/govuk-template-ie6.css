@@ -92,7 +92,8 @@ fieldset {
   padding: 0; }
 
 a:link {
-  color: #005ea5; }
+  color: #005ea5;
+  text-decoration-skip: ink; }
 
 a:visited {
   color: #4c2c92; }
@@ -217,6 +218,10 @@ a:focus {
   background-color: #ffbf47;
   outline: 3px solid #ffbf47; }
 
+/* Make links slightly darker when focused to improve contrast. */
+a:link:focus {
+  color: #005798; }
+
 /* Make skiplinks visible when they are tabbed to */
 .skiplink {
   position: absolute;
@@ -340,6 +345,8 @@ button:focus {
       text-decoration: none; }
     #global-header .header-proposition a#proposition-name:hover {
       text-decoration: underline; }
+    #global-header .header-proposition a#proposition-name:focus {
+      color: #0b0c0c; }
     #global-header .header-proposition a.menu {
       font-family: "nta", Arial, sans-serif;
       font-weight: 400;
