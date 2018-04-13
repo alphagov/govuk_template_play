@@ -46,7 +46,7 @@
 
     <div id="global-cookie-message">
       
-        @cookieMessage.getOrElse("<p>GOV.UK uses cookies to make the site simpler. <a href=\"https://www.gov.uk/help/cookies\">Find out more about cookies</a></p>")
+        @cookieMessage.getOrElse(Html("<p>GOV.UK uses cookies to make the site simpler. <a href=\"https://www.gov.uk/help/cookies\">Find out more about cookies</a></p>"))
       
     </div>
 
@@ -90,7 +90,7 @@
           </div>
 
           <div class="copyright">
-            <a href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/copyright-and-re-use/crown-copyright/">@crownCopyrightMessage.getOrElse("&copy; Crown copyright")</a>
+            <a href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/copyright-and-re-use/crown-copyright/">@crownCopyrightMessage.getOrElse(Html("&copy; Crown copyright"))</a>
           </div>
         </div>
       </div>
