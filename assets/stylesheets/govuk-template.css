@@ -171,7 +171,8 @@ input[type="search"]::-webkit-search-decoration {
     display: none; }
 
 /* Hide for both screenreaders and browsers */
-.hidden {
+.hidden,
+.js-enabled .js-hidden {
   display: none;
   visibility: hidden; }
 
