@@ -56,7 +56,7 @@
       <div class="header-wrapper">
         <div class="header-global">
           <div class="header-logo">
-            <a href="@homepageUrl.getOrElse("https://www.gov.uk/")" title="@logoLinkTitle.getOrElse("Go to the GOV.UK homepage")" id="logo" class="content">
+            <a href="@homepageUrl.getOrElse("https://www.gov.uk/")" title="@logoLinkTitle.getOrElse("Go to the GOV.UK homepage")" id="logo" class="content" data-module="track-click" data-track-category="homeLinkClicked" data-track-action="homeHeader">
               <img src="@routes.Template.at("images/gov.uk_logotype_crown_invert_trans.png")" width="36" height="32" alt=""> @globalHeaderText.getOrElse("GOV.UK")
             </a>
           </div>
